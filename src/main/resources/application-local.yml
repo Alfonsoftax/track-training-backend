@@ -1,0 +1,32 @@
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.springframework.transaction: DEBUG
+    org.apache.kafka.clients.producer.ProducerConfig: OFF
+    org.apache.kafka.clients.consumer.ConsumerConfig: OFF
+    org.apache.kafka.clients.admin.AdminClientConfig: OFF
+    org.apache.kafka.common.config.AbstractConfig: OFF
+
+spring.jpa.hibernate.ddl-auto: update
+spring.sql.init.mode: always
+
+DATASOURCE_URL: jdbc:oracle:thin:@localhost:1521:ora
+DATASOURCE_USERNAME: c##ahidalgoo
+DATASOURCE_PASSWORD: password1
+KAFKA_BOOTSTRAP_SERVERS: localhost:9092
+ELASTICSEARCH_URL: http://localhost:9200
+#spring:
+#  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:ora
+#    username: c##ahidalgoo
+#    password: password1
+#    driver-class-name: oracle.jdbc.OracleDriver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.Oracle12cDialect
+#  sql:
+#    init:
+#      mode: always
