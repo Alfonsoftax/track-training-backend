@@ -1,6 +1,6 @@
 config {
-    title "Izertis Customer JPA Example"
-    basePackage "com.izertis.architecture.examples.customer"
+    title "Track training App"
+    basePackage "com.track.training.app.customer"
     persistence jpa
     databaseType postgresql
 

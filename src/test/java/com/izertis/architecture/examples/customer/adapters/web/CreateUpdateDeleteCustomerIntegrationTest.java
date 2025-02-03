@@ -1,9 +1,10 @@
 package com.izertis.architecture.examples.customer.adapters.web;
 
-import com.izertis.architecture.examples.customer.adapters.web.model.CustomerDTO;
-import com.izertis.architecture.examples.customer.adapters.web.model.PaymentMethodTypeDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
+
+import com.track.training.app.customer.adapters.web.model.CustomerDTO;
+import com.track.training.app.customer.adapters.web.model.PaymentMethodTypeDTO;
 
 import static org.springframework.http.HttpMethod.*;
 

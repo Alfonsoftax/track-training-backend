@@ -1,11 +1,11 @@
 logging:
   level:
     root: INFO
-    com.izertis.architecture.examples.customer: DEBUG
+    com.track.training.app.customer: DEBUG
     org.apache.kafka.clients.admin: WARN
 
 springdoc.swagger-ui.urls:
-  - name: Izertis Customer JPA Example
+  - name: TrainTrackApp
     url: /apis/openapi.yml
 
 management:
@@ -19,8 +19,8 @@ spring:
       roles: USER
   jpa:
     open-in-view: false
-    hibernate:
-      ddl-auto: update
+#    hibernate:
+#      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.OracleDialect
@@ -42,9 +42,9 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
   elasticsearch:
-    uris: ${ELASTICSEARCH_URL}
+    uris: http://localhost:9200
   kafka:
-    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:

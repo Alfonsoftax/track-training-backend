@@ -7,17 +7,17 @@
 		<version>3.3.1</version> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.izertis.architecture.examples.customer</groupId>
-	<artifactId>izertis-customer-jpa-example</artifactId>
+	<groupId>com.track.training.app.customer</groupId>
+	<artifactId>track-training-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Izertis Customer JPA Example</name>
-	<description>Izertis Customer JPA Example</description>
+	<name>Track training App</name>
+	<description>Track training App</description>
 
 
 	<properties>
 		<java.version>21</java.version>
 
-		<basePackage>com.izertis.architecture.examples.customer</basePackage>
+		<basePackage>com.track.training.app.customer</basePackage>
 		<openApiApiPackage>${basePackage}.adapters.web</openApiApiPackage>
 		<openApiModelPackage>${basePackage}.adapters.web.model</openApiModelPackage>
 		<asyncApiModelPackage>${basePackage}.core.outbound.events.dtos</asyncApiModelPackage>
@@ -39,7 +39,7 @@
 		<spring-javaformat-maven-plugin.version>0.0.42</spring-javaformat-maven-plugin.version>
 		<infinispan-spring-boot-starter-embedded.version>14.0.29.Final</infinispan-spring-boot-starter-embedded.version>
 		<redisson.version>3.32.0</redisson.version>
-		<izertis-usermanagement-starter.version>0.0.1-SNAPSHOT</izertis-usermanagement-starter.version>
+		<traintrack-usermanagement-starter.version>0.0.1-SNAPSHOT</traintrack-usermanagement-starter.version>
 		<wiremock.version>3.9.1</wiremock.version>
 	</properties>
 
@@ -67,6 +67,23 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+				<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

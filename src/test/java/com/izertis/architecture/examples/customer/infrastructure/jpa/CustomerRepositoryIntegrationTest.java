@@ -1,10 +1,11 @@
 package com.izertis.architecture.examples.customer.infrastructure.jpa;
 
-import com.izertis.architecture.examples.customer.core.domain.Address;
-import com.izertis.architecture.examples.customer.core.domain.Customer;
-import com.izertis.architecture.examples.customer.core.domain.PaymentMethod;
-import com.izertis.architecture.examples.customer.core.domain.PaymentMethodType;
-import com.izertis.architecture.examples.customer.core.outbound.jpa.CustomerRepository;
+import com.track.training.app.customer.core.domain.Address;
+import com.track.training.app.customer.core.domain.Customer;
+import com.track.training.app.customer.core.domain.PaymentMethod;
+import com.track.training.app.customer.core.domain.PaymentMethodType;
+import com.track.training.app.customer.core.outbound.jpa.CustomerRepository;
+
 import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

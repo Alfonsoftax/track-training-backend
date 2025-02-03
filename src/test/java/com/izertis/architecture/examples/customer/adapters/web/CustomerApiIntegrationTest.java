@@ -1,6 +1,8 @@
 package com.izertis.architecture.examples.customer.adapters.web;
 
-import com.izertis.architecture.examples.customer.adapters.web.model.CustomerSearchCriteriaDTO;
+import com.track.training.app.customer.adapters.web.CustomerApi;
+import com.track.training.app.customer.adapters.web.model.CustomerSearchCriteriaDTO;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 

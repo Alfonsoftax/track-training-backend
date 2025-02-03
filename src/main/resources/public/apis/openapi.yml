@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
-  title: "Izertis Customer JPA Example"
+  title: "Train Track App"
   version: 0.0.1
-  description: "Izertis Customer JPA Example"
+  description: "Train track App"
   contact:
     email: email@domain.com
 servers:
