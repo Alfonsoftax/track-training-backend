@@ -1,7 +1,7 @@
 package com.track.training.app.customer.core.implementation.mappers;
 
 import com.track.training.app.customer.core.domain.Customer;
-import com.track.training.app.customer.core.inbound.dtos.CustomerSearchCriteria;
+import com.track.training.app.customer.core.inbound.dtos.AtletaDto;
 
 import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
@@ -18,7 +18,7 @@ public interface CustomerServiceMapper {
     Customer update(@MappingTarget Customer entity, Customer input);
 
     @Mapping(target = "id", ignore = true)
-    Customer update(@MappingTarget Customer entity, CustomerSearchCriteria input);
+    Customer update(@MappingTarget Customer entity, AtletaDto input);
 
     @AfterMapping
     default void manageRelationships(@MappingTarget Customer entity) {

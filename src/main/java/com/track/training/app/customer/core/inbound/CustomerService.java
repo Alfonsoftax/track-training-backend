@@ -1,7 +1,7 @@
 package com.track.training.app.customer.core.inbound;
 
 import com.track.training.app.customer.core.domain.Customer;
-import com.track.training.app.customer.core.inbound.dtos.CustomerSearchCriteria;
+import com.track.training.app.customer.core.inbound.dtos.AtletaDto;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,6 +24,6 @@ public interface CustomerService {
     public void deleteCustomer(Long id);
 
     /** */
-    public Page<Customer> searchCustomers(CustomerSearchCriteria input, Pageable pageable);
+    public Page<Customer> searchCustomers(AtletaDto input, Pageable pageable);
 
 }

@@ -1,6 +1,5 @@
 package com.track.training.app.customer.app.domain;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -9,6 +8,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.track.training.app.customer.core.domain.Customer;
+import com.track.training.app.interfaces.DomainEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,8 +20,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.FieldNameConstants;
 
 /** */
 
@@ -31,7 +34,15 @@ import lombok.Setter;
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
-public class Atleta implements Serializable {
+@EqualsAndHashCode(callSuper = false, onlyExplicitlyIncluded = true)
+@FieldNameConstants
+@ToString
+public class Atleta implements DomainEntity<Long> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_atleta_id")
@@ -52,7 +63,7 @@ public class Atleta implements Serializable {
     private Long altura;
 
     @Column(name = "PESO")
-    private Double peso;
+    private Long peso;
 
     @Column(name = "LAST_MODIFIED_BY", length = 50)
     private String lastModifiedBy;

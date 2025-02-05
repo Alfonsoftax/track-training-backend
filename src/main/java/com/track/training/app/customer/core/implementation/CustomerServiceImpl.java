@@ -4,7 +4,7 @@ import com.track.training.app.customer.core.domain.Customer;
 import com.track.training.app.customer.core.implementation.mappers.CustomerServiceMapper;
 import com.track.training.app.customer.core.implementation.mappers.EventsMapper;
 import com.track.training.app.customer.core.inbound.CustomerService;
-import com.track.training.app.customer.core.inbound.dtos.CustomerSearchCriteria;
+import com.track.training.app.customer.core.inbound.dtos.AtletaDto;
 import com.track.training.app.customer.core.outbound.jpa.CustomerRepository;
 
 import org.slf4j.Logger;
@@ -77,7 +77,7 @@ public class CustomerServiceImpl implements CustomerService {
 //        eventsProducer.onCustomerEvent(customerEvent);
     }
 
-    public Page<Customer> searchCustomers(CustomerSearchCriteria input, Pageable pageable) {
+    public Page<Customer> searchCustomers(AtletaDto input, Pageable pageable) {
         log.debug("Request searchCustomers: {} {}", input, pageable);
 
         var customers = customerRepository.findAll(pageable);

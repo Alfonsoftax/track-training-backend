@@ -1,4 +1,4 @@
-package com.track.training.app.customer.core.inbound.dtos;
+package com.track.training.app.atleta.core.inbound.dtos;
 
 import java.io.Serializable;
 
