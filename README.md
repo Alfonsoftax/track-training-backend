@@ -1,56 +1,10 @@
-# Izertis Customer JPA Example
+## Installation
 
-## Requirements
+Follow these steps to install and run the project:
 
-* JDK 21+
-* Maven 3.8.+
-* Docker Compose: in case you don't have Docker-Compose installed in your machine, install [Rancher Desktop](https://rancherdesktop.io/) and configure `dockerd` as engine (instead of `containerd`), this will include `docker` and `docker-compose` commands in your PATH.
-* Your favorite IDE
+1. Clone the repository: `git clone https://github.com/irojascorsico/jwt-auth-login.git`
+2. Navigate to the project directory: `cd your-repo/backend/spring-boot-jwt-authentication`
+3. Build the project using Maven:: `mvn clean install`
+4. Run the project: `mvn spring-boot:run`
+5. Test the API Rest using Postman or another application at `http://localhost:8080`.
 
-## Getting Started
-
-Use the following commands to run the application or tests:
-
-* Start docker dependencies:
-
-```bash
-docker-compose up -d
-```
-
-* Run the application:
-
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=local
-```
-
-* Open [Swagger UI](http://localhost:8080/swagger-ui/index.html) in your browser.
-Use "Basic Authentication" with username `user` and password `password` to authenticate.
-
-* Running Unit Tests:
-
-```bash
-mvn clean test
-```
-
-* Running Unit and Integration Tests:
-
-```bash
-mvn clean verify
-```
-
-* Advanced: Inspect kafka messages:
-
-```bash
-docker-compose exec -T kafka bash -c \
-  "kafka-console-consumer --bootstrap-server localhost:9092 --topic 'customer.events' --from-beginning"
-```
-
-* Stop docker dependencies:
-
-```bash
-docker-compose down
-```
-
-## License
-
-&copy; 2024 Izertis. All rights reserved.
